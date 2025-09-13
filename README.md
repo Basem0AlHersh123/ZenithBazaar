@@ -83,3 +83,8 @@ Market/
    ```
 
 ---
+
+## 📸 Screenshots
+| Home Page | Market Page | Dashboard |
+|----------|-------------|-----------|
+| ![Home](static/images/screenshots/home.png) | ![Market](static/images/screenshots/market.png) | ![Dashboard](static/images/screenshots/dashboard.png) |
