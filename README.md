@@ -81,10 +81,11 @@ Market/
    ```
    http://127.0.0.1:5000
    ```
-
----
-
+------------------------------------
 ## 📸 Screenshots
+
 | Home Page | Market Page | Dashboard |
 |----------|-------------|-----------|
-| ![Home](static/images/screenshots/home.png) | ![Market](static/images/screenshots/market.png) | ![Dashboard](static/images/screenshots/dashboard.png) |
+| ![Home](Market/static/images/screenshots/home.png) | ![Market](Market/static/images/screenshots/market.png) | ![Dashboard](Market/static/images/screenshots/dashboard.png) |
+
+![About Page](Market/static/images/screenshots/about.png)
