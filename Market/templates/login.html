@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/logo.css')}}">
+<body class="text-center">
+    <div class="container">
+        <form method="post" class="form-signin" style="color: white;">
+            <div class="container">
+                <img  src="{{ url_for('static', filename='images/logo.png')}}" class="img-fluid d-block mb-4 mt-4 mx-auto rounded-circle "alt="Logo Photo" id="m" ></img>
+                {{ form.hidden_tag() }}
+                <h2 class="h3 mb-3 font-weight-normal">
+                    Please Enter Your Information
+                </h2>
+                {{ form.username.label()}}
+                <br>
+                {{ form.username(class="form-control",placeholder="User Name")}}
+                <br>
+                {{form.password.label()}}
+                {{form.password(class="form-control" ,placeholder="Password")}}
+                <br>
+                {{form.submit.label()}}
+                {{form.submit(class="btn btn-lg btn-block btn-primary")}}
+                <br>
+
+                <div>
+                    <h6>
+                        Do not have an account
+                    </h6>
+                    <a href="{{url_for('register_page')}}" class="btn btn-sm btn-secondary ">
+                    sign up
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+{%endblock%}

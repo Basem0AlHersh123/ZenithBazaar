@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Basem Mohammed Ali Moqbul Al-Hersh">
+    <meta name="description" conent="This website is for selling and marketing different items with graet qualities and reasonable prices">
+    <meta name="keywords" content="market, product, laptop, computer, printer, shop.......">
+    <meta http-equiv="refresh" content="30">
+
+    <!-- Local Bootstrap CSS -->
+    <link rel="icon" href="{{ url_for('static', filename='images/icon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js' )}}"></script>
+    <!-- Local Bootstrap JS (with Popper) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+        <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/home_style.css')}}">     -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+  </head>
+  <body >
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark font-weight-bold">
+      <img  width="200" height="200" src="{{ url_for('static', filename='images/logo.png')}}" class="img-fluid d-block m-md-3 mx-auto rounded-circle navbar-toggler-icon "alt="Logo Photo" id="icon"></img>
+      <a class="navbar-brand" href="{{ url_for('home_page') }}"><span>ZenithBazaar</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link " href="{{ url_for('home_page') }}">
+                
+                  <i class="fas fa-home"></i> Home
+                   <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="{{ url_for('market_page') }}">
+                  <i class="fas fa-table"></i> Market
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="{{ url_for('about') }}">
+                  <i class="fas fa-user"></i> about
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="{{ url_for('contact_us') }}">
+                  <i class="fas fa-envelope"></i> Contact
+                </a>
+            </li>
+        </ul>
+        {% if current_user.is_authenticated %}
+          <ul class="navbar-nav">
+            {%if current_user.username=="Basem Mohammed Al-Hersh"%}
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('dashboard')}}">
+                <i class="fas fa-cog"></i>
+                Dashboard
+              </a>
+            </li>
+            {%endif%}
+            <li class="nav-item">
+              <a class="nav-link">
+                welcome {{ current_user.username }}
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  style="color: lawngreen;font-weight: bold;">
+                <i class="fas fa-money-bill-wave"></i>
+                <i class="fas fa-coins"></i>
+                {{ current_user.prettier_bugdet }}
+              </a>  
+            </li>
+              <li class="nav-item"> 
+                <a href="{{url_for('Logout_page')}}" class="nav-link" >
+                   logout
+                   <i class="fas fa-sign-out-alt"></i>  
+                </a>
+            </li>
+          </ul>
+        {% else %}
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('login')}}"><i class="fas fa-sign-in-alt"></i> Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('register_page')}}">Register</a>
+              </li>
+          </ul>
+        {% endif %}
+      </div>
+    </nav>
+    {% with messages = get_flashed_messages(with_categories=true)%}
+      {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{category}} alert-dismissible fade show " role=
+            'alert'>
+              <button class="ml-2 mb-1 close" type="button" data-bs-dismiss="alert" aria-label="Close" >
+                <span aria-hidden="true">&times;</span>
+              </button>
+              {{ message }}
+            </div>
+        {%endfor%}
+      {% endif%}
+    {%endwith%}
+    {% block content %}
+    {% endblock %}
+  </body>
+  <style>
+      body {
+        background-color: #212121;
+        color: white;
+      }
+      #icon{
+        width: 70px;
+        height: 70px;
+      }
+      span{
+        text-shadow: 1px 2px aqua;
+        color:red;
+        font-weight: bold;
+      }
+      span:hover,a:hover{
+        text-shadow: 3px 2px red;
+        color:rgba(0, 255, 217, 0.804);
+        font-weight: bolder;
+      }
+      span:active,a:active{
+        text-shadow: 3px 2px rgba(247, 0, 255, 0.385);
+        color:rgba(140, 255, 0, 0.804);
+        font-weight: bolder;
+      }
+    a{
+        transition-property: background-,width;       
+        transition-duration: 5s;
+    }
+    a:hover{
+        width: 400;
+        margin: 10px;
+    }
+  </style>
+  <!-- <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script> -->
+</html>

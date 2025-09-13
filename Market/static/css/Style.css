@@ -1,0 +1,139 @@
+/* style.css */
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #212121;
+        color:white;
+    }
+
+    .my-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #343a40;
+        color: white;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        font-size: 1.5rem;
+        text-transform: none;
+        text-decoration: none;
+        color:white;    
+        font-weight: bold;
+    }
+    
+    .toggle-btn {
+        display: none;
+        background: none;
+        color: white;
+        font-size: 1.5rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .menu ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
+        margin: 10px 0;
+    }
+    .right{
+        float: left;
+        right: 10%;
+    }
+    .left{
+        float: left;
+        right: inherit;
+    }
+    .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+
+    .menu a:hover {
+        background-color: #444;
+        border-radius: 4px;
+    }
+    table{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        margin-top: 10px;
+        border-collapse:collapse;
+        background-color: #343a40;
+    }
+    table thead{
+        border-collapse:collapse;
+    }
+    
+    tr,th,td{
+        border: 1px solid white;
+        border-style:hidden;
+        border-spacing: 5px;
+        padding: 10px;        
+        text-align: center;
+    }
+    table{
+        width: 100%;
+    }
+    .More{
+        background-color: rgb(47, 255, 189);
+        border-radius: 10px;
+        display:inline-table;
+        box-shadow: 0 4px 14px rgba(59, 246, 240, 0.6);
+        border: 2px solid rgba(59, 121, 245, 0.6); 
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 5px;
+        
+    }
+    .More:hover{
+        color: aqua;
+        background-color: red;
+    }
+    .purchase:hover{
+        color: aqua;
+        background-color: red;
+    }
+    .purchase{
+        background-color: rgba(91, 141, 220, 0.925);
+        border-radius: 10px;
+        border: 2px solid #00f7ff;  
+        box-shadow: 0 4px 14px rgba(59, 130, 246, 0.6);
+        display: inline-table;
+        flex-direction: column;
+        color:azure;
+        align-items: center;
+        padding: 10px;
+        margin: 5px;
+
+    }
+        /* Mobile responsive like Bootstrap's navbar-expand-md */
+    @media (max-width: 768px) {
+        .toggle-btn {
+            display: block;
+    }
+        .menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+        .menu.active {
+            display: flex;
+    }
+        .menu ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }

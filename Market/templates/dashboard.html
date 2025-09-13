@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="static/css/all.min.css">
+    <link rel="stylesheet" href="static/css/dashboard style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
+</head>
+<body> 
+    <aside class="menu">
+            <ul>
+                <li class="img_box">
+                    <div>
+                        <img src="static/images/logo.png" alt="Logo" class="profile">
+                    </div>
+                    <h2>Basem AlHersh</h2>
+                </li>
+                <li class="home">
+                    <a href="{{url_for('home_page')}}">
+                            <i class="fas fa-home"></i>
+                            <p>Home</p>
+                    </a>
+                </li>
+                <li class="clients">
+                    <a href="{{url_for('dashboard_users')}}">
+                            <i class="fas fa-user"></i>
+                            <p>clients</p>
+                    </a>
+                </li>
+                <li class="products">
+                    <a href="{{url_for('dashboard_products')}}">
+                            <i class="fas fa-table"></i>
+                            <p>products</p>
+                    </a>
+                </li>
+                <li class="posts">
+                    <a href="#">
+                            <i class="fas fa-pen"></i>
+                            <p>posts</p>
+                    </a>
+                </li>
+                <li class="charts">
+                    <a href="#">
+                            <i class="fas fa-chart-pie"></i>
+                            <p>Charts</p>
+                    </a>
+                </li>
+                <li class="favorite">
+                    <a href="#">
+                            <i class="fas fa-star"></i>
+                            <p>favorite</p>
+                    </a>
+                </li>
+                <li class="settings">
+                    <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <p>setting</p>
+                    </a>
+                </li>
+                <li class="logout" title="Log out">
+                    <a href="{{url_for('Logout_page')}}">
+                            <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+            </ul>
+    </aside>
+    <main class="content">
+        <div class="dashboard">
+            <div class="title">
+                <p>dashboard</p>
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="data">
+                <ul>
+                    <li>
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <p>users</p>
+                            <h3>{{users}}</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-pen"></i>
+                        <div>
+                            <p>posts</p>
+                            <h3>34</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-table"></i>
+                        <div>
+                            <p>products</p>
+                            <h3>{{ count }}</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-dollar-sign"></i>
+                        <div>
+                            <p>Fortune</p>
+                            <h3>${{total_balance}}</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% block title %}
+Home page
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/home_style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+
+<header>
+    <div class="position-relative p-3 p-md-3 m-md-3 text-center main_image">
+        <div class="container-fluid my-4">
+            <div id="itemCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    {% for item in items %}
+                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <img src="{{ url_for('static', filename='images/' ~ item.name ~ '.jpg') }}"
+                             class="d-block w-100"
+                             alt="{{ item.name }}"
+                             style="height: 500px; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block text-center">
+                            <h5>{{ item.name }}</h5>
+                            <p>${{ item.price }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#itemCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#itemCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-5 pl-g-5 mx-auto my-5">
+            <h1 class="display-4 font-weight-bold">Look First/Then leap</h1>
+            <p class="lead font-weight-normal">The best trades require research then committment </p>
+            <a href="{{url_for('market_page')}}" class="btn btn-sm btn-primary font-weight-bold p-md-3">Get started for free</a>
+            <p class="lead font-weight-normal">0$ forever no credit card needed</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="position-relative text-center sub_video">
+        <h1 class="font-weight-bold">Where the world does markets</h1>
+        <p>Join 100 million traders and inventors taking the future into their own hands</p>
+        <br>
+        <video src="{{ url_for('static', filename='video/guider.mp4') }}" playsinline muted autoplay></video>
+        <video src="{{ url_for('static', filename='video/guider.webm') }}" playsinline muted autoplay></video>
+    </div>
+
+</main>
+<!-- Replace the placeholder div with your actual WowSlider code -->
+<!-- START WOWSLIDER CODE -->
+<!-- PASTE YOUR WOWSLIDER HTML/JS CODE HERE -->
+<!-- Example placeholder structure (replace this entire comment block): -->
+<!--
+<div id="wowslider-container1"> ... </div>
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<style type="text/css"> ... </style>
+<div class="ws_script" style="..."><a href="...">jquery carousel</a> by WOWSlider.com v9.0</div>
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+-->
+<!-- END WOWSLIDER CODE -->
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
+    <div class="m-md-3 p-md-3">
+
+        <!-- Contact Form Section -->
+        <div class="container justify-content-center row" id="contact">
+
+            <section id="contact-us" class="mb-4">
+                <h3>Contact Us</h3>
+                <p>If you have any questions, feel free to reach out!</p>
+                <form action="/contact" method="post" class="row g-3 mx-auto" style="max-width: 600px;">
+                    <div class="col-12">
+                        <input type="email" name="email" placeholder="Your Email" required class="form-control bg-dark text-white border-secondary">
+                    </div>
+                    <div class="col-12">
+                        <textarea name="message" placeholder="Your Message" required class="form-control bg-dark text-white border-secondary" rows="3"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary w-100">Send</button>
+                    </div>
+                </form>
+            </section>
+            <!-- Social Media Icons -->
+            <section id="social-media" class="mb-4">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="https://youtube.com  " target="_blank" class="text-decoration-none">
+                        <i class="fab fa-youtube fa-2x text-danger"></i>
+                    </a>
+                    <a href="https://twitter.com  " target="_blank" class="text-decoration-none">
+                        <i class="fab fa-twitter fa-2x text-blue"></i>
+                    </a>
+                    <a href="https://instagram.com  " target="_blank" class="text-decoration-none">
+                        <i class="fab fa-instagram fa-2x text-pink"></i>
+                    </a>
+                    <a href="https://facebook.com  " target="_blank" class="text-decoration-none">
+                        <i class="fab fa-facebook fa-2x text-blue"></i>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <!-- Brand Slogan Image -->
+        <section id="brand-slogan" class="mb-4 ">
+            <img src="{{ url_for('static', filename='images/footer/slogan.png') }}" alt="ZenithBazaar Logo" class="img-fluid rounded" style="max-width: 500px; height: auto;">
+        </section>
+        <div>
+            <!-- Navigation Links -->
+            <section id="navigation" class="mb-3">
+                <ul class="nav justify-content-center list-inline">
+                    <li class="list-inline-item"><a href="{{ url_for('home_page') }}">Home</a></li>
+                    <li class="list-inline-item"><a href="{{ url_for('market_page') }}">Market</a></li>
+                    <li class="list-inline-item"><a href="{{ url_for('about') }}">About</a></li>
+                    <li class="list-inline-item"><a href="{{ url_for('contact_us') }}">Contact</a></li>
+                </ul>
+            </section>
+
+            <!-- Legal & Copyright -->
+            <section id="legal">
+                <p class="mb-2">&copy; 2025 ZenithBazaar. All rights reserved.</p>
+                <p>
+                    <a href="{{ url_for('privacy_policy') }}">Privacy Policy</a> |
+                    <a href="{{ url_for('terms_of_service') }}">Terms of Service</a>
+                </p>
+            </section>
+        </div>
+    </div>
+</footer>
+<!-- <footer>
+    <section id="contact_us">
+
+    </section>
+    <section id="social_media">
+        <a href="youtube.com"><img src="{{ url_for('static', filename='images/footer/YouTube.png')}}" alt="button" width="50"></a>
+        <a href="twitter.com"><img src="{{ url_for('static', filename='images/footer/Twitter.png  ')}}" alt="button" width="50"></a>
+        <a href="instagram.com"><img src="{{ url_for('static', filename='images/footer/Instagram.png')}}" alt="button" width="50"></a>
+        <a href="facebook.com"><img src="{{ url_for('static', filename='images/footer/Facebook.png')}}" alt="button" width="50"></a>
+    </section>
+    <div><img src="{{ url_for('static', filename='images/footer/slogan.png')}}" alt="Slogan" ></div>
+    <div class="contactus">
+        <ul>
+            <li>
+                <a href="{{ url_for('home_page') }}">
+
+                 Home
+                <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('market_page') }}">
+                 Market
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('about') }}">
+                 about
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('contact_us') }}">
+                 Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer> -->
+<link rel="stylesheet" href="{{url_for('static', filename='js/footer.js')}}">
+
+{% endblock %}

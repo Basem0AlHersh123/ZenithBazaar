@@ -1,0 +1,103 @@
+h1{
+    font-family: MonumentExtended-Regular!important; 
+    font-weight: bold;
+    animation-name: title;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+@keyframes title {
+    from{
+        color: aqua ;
+        background-color: whitesmoke;
+
+        font-weight: bold;
+    } 
+    to{
+        color: red;
+    }       
+}
+p {
+    font-family: 'Courier Prime', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+input,textarea{
+    color: white;
+    font-family: MonumentExtended-Regular!important;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+    max-width: 500px;    
+}
+main{
+    /* align-items: flex-start;  */
+    align-content: flex-start;
+
+    
+    background-color: #171723a7; 
+    display: flex;
+    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    
+}
+textarea{
+    width: 95%;   
+}
+main #text{
+    /* display: flex; */
+    flex-basis: 500px;
+    flex-grow: 2;
+        
+}
+p{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 1px;
+}
+/* #form {
+    justify-content: flex-start;
+} */
+button,input,textarea{
+    /* background-color: white; */
+    font-family: MonumentExtended-Regular!important;
+    margin-left: 10px;
+    /* border: 100 groove black; */
+    transition-delay: 0.05s;
+    transition-property: margin,margin-left,width,padding;
+    transition-duration: 1s,1s,1s,1s;
+    margin: 5px;
+    
+    
+}    
+input:hover,textarea:hover{
+    padding: 15px;
+}
+button:hover{
+    margin: 10px;
+    transition-timing-function:ease-out;
+    transition-delay: 0;
+    background-color: white;
+    width: 220px;
+}
+button img:hover{
+    margin-left: 4px;
+}
+button:active{
+    margin: 12px;
+}
+#logos {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    
+    justify-content:flex-start;
+
+    align-items: flex-start;
+}

@@ -1,0 +1,42 @@
+{%extends "base.html"%}
+{%block title%}
+contact us
+{%endblock%}
+{% block content %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/contact_us.css')}}">    
+    <body>
+        <h1 class="m-md-4 text-center">Contact Basem</h1>
+        <main id="main">
+            <div class="m-md-5" id="text">
+                <section>
+                    <article>
+                        <p>
+                            Thanks for your interest in my Market and website. If you’d like to get in touch with me, please contact me on social media or complete the following form.
+                            For sponsorships or advertising partnerships, please send an email to basem@gmail.com
+                        </p>
+                    </article>
+                </section>
+                <section id="logos">
+                <a href="youtube.com"><img src="{{ url_for('static', filename='images/footer/YouTube.png')}}" alt="button" width="50"></a>
+                <a href="twitter.com"><img src="{{ url_for('static', filename='images/footer/Twitter.png  ')}}" alt="button" width="50"></a>
+                <a href="instagram.com"><img src="{{ url_for('static', filename='images/footer/Instagram.png')}}" alt="button" width="50"></a>
+                <a href="facebook.com"><img src="{{ url_for('static', filename='images/footer/Facebook.png')}}" alt="button" width="50"></a>
+                </section>
+            </div>
+            <div id="form">
+                <form>
+                    <label>
+                        <input type="text" name="first_name" placeholder="First Name" class="bg-dark" style="color: white; font-family: MonumentExtended-Regular!important;" required minlength="2" max="12">
+                    </label>
+                    <label>
+                        <input type="text" name="first_name" placeholder="Last Name" class="bg-dark"  minlength="2" max="12">
+                    </label>
+                    <textarea name="email" id="" placeholder="Email Address" class="bg-dark"  rows="1"></textarea>
+                    <textarea name="question" id=""  class="bg-dark" rows="5" placeholder="How can I help you?" ></textarea>
+                    <br>    
+                    <button type="submit"><img src="{{ url_for('static', filename='images/images/button2.png')}}" alt="button" width="200"></button>
+                </form>
+            </div>
+        </main>
+    </body>
+{%endblock%}

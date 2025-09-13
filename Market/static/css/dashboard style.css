@@ -1,0 +1,153 @@
+*{
+    color:white;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif ;
+    text-transform:capitalize;
+}
+body{
+    padding:5px 20px ;  
+    background-color:#001;
+    display: flex;
+}
+.menu{
+    float: left;
+    width: 68px;
+    height: 100vh;
+    padding: 15px;
+    background-color: #123;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.menu:hover{
+    width: 260px;
+}
+ul{
+    list-style: none;
+    background-color:rgba(19, 31, 43, 0.722) ;
+    height: 95%;
+    width: 100%;
+    position:relative;
+}
+.img_box{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+    flex-shrink: 0;
+}
+.img_box img{
+    border-radius: 50%;
+    width: 80px;
+    border:4px groove rgba(255, 208, 0, 0.414);
+}
+.img_box h2{
+    font-size: 20px;
+    
+}
+ul li a{
+    text-decoration: none;
+    color:white;
+    display: flex;
+    margin:10px 0px;
+    padding:10px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+.menu ul li i{
+    font-size: 32px;
+    width: relative;
+    
+}
+
+.logout{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+.logout a{
+    background-color: red;
+}
+ul li a:hover, .home,td:hover{
+    background-color:#ffffff55 ;
+    text-shadow: 1px 2px red;
+}
+
+.content{
+    width: 100%;
+    margin: 10px;
+}
+
+.title{
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 106, 255)  ;
+    width: 100%;
+    font-size: large;
+    margin: 10px 20px 10px 5px;
+}
+
+.data ul{
+    flex-wrap: wrap ;
+    display: flex;  
+}
+.data ul li{
+    background-color: #14131355;
+    padding: 10%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    gap: 50px;  
+    flex-wrap: wrap;
+    height: 150PX;
+    flex-basis: 150PX;
+    flex-grow: 1;
+    border-radius: 15px;
+    justify-content: space-around;
+}
+.data ul li i{
+    font-size: 62px;
+
+}
+.data ul li div{    
+    font-size: 30px;
+}
+.data ul li:hover{
+    background-color: #ffffff55;
+    box-shadow: 2px 4px blue;
+    border: 10px groove red;
+}
+table{
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    border-spacing: 10px;
+}
+th{
+    background-color: blue;
+
+}
+td,th{
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 15px;
+}
+td{
+        background-color: #123  ;
+}
+.price, .count{
+    padding: 4px;
+    border-radius: 8px;
+}
+.count{
+    background-color: gold;
+    color: black;
+}
+.price{
+    background-color: rgba(68, 255, 47, 0.753);
+}

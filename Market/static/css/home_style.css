@@ -1,0 +1,105 @@
+body{
+    min-width:320px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+.main_image{
+    background-image: url(../images/hompage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1500px;
+    margin-bottom: 1500px;
+    background-color: black;
+}
+.sub_video{
+    background-image: url(../images/video_image.webp);
+    background-size: cover;
+}
+.sub_video video{
+    width: 40%;
+    height: 60%;
+}
+
+
+
+.motivation img {
+    /* margin-left: 40%; */
+    text-align: center;
+    width: auto;
+    height: auto;
+    border-radius: auto; /* Note: 'auto' is not a valid value for border-radius. Use a specific value like '10px' or '50%' if needed, or remove this line. */
+}
+
+/* Carousel Container */
+#itemCarousel {
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px; /* Rounded corners */
+    margin: 0 auto;
+}
+
+/* Carousel Image (Background Style) */
+.carousel-image {
+    background-size: cover; /* Ensure image covers the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    height: 600px; /* Increased height to show more of the product */
+    position: relative; /* For overlay effects */
+}
+
+/* Carousel Captions */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    color: white;
+    padding: 1rem;
+    bottom: 1rem; /* Position caption at the bottom */
+    left: 0;
+    right: 0;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 400px; /* Reduce height for smaller screens */
+}
+
+/* WowSlider - Disable Image Transitions */
+#wowslider-container1 .ws_images,
+#wowslider-container1 .ws_images li,
+#wowslider-container1 .ws_images a,
+#wowslider-container1 .ws_images img {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+}
+
+#wowslider-container1 .ws_images img {
+    opacity: 1 !important;
+}
+
+#wowslider-container1 .ws_images li {
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -o-transform: none !important;
+}
+
+/* Responsive Media Query */
+@media (max-width: 800px) {
+    body {
+        max-width: 2000px; /* Note: This might behave unexpectedly. Consider using 'width: 100%' or removing if not needed. */
+    }
+}

@@ -1,0 +1,27 @@
+p {
+    font-family: 'Courier Prime', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+#main{
+    background-color: #171723a7; 
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+}
+#text{
+    width: 50%;
+}
+#image img{
+    flex-wrap:wrap;
+    flex-shrink: 2;
+    width: 500px;
+    min-width: 400;
+    max-width: 500;
+}
+mark{
+    color: rgb(3, 11, 127);
+    text-shadow: 1px 2px red;
+}

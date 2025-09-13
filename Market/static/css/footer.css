@@ -1,0 +1,170 @@
+/* footer{
+    background-color: black;
+}
+#social_media {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    
+    justify-content:flex-start;
+    margin-left: 30px;
+    align-items: flex-start;
+}
+div img{
+    width: 250px;
+}
+.contactus ul{
+    display: flex;
+    flex-direction: row;
+} */
+
+/* Footer Styles */
+
+footer {
+    flex-shrink: 0;
+}
+footer {
+    background-color: #121212;
+    color: white;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* /* margin-right: 20px; */
+    /* margin: 30px;  */
+}
+#contact section{
+    margin-left: 20px;
+}
+#contact-us form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#social-media div a,
+#brand-slogan{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-self: flex-end;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+#navigation ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 7% ;
+    flex-shrink: 10;
+}
+#legal{
+    display: flex;
+    justify-content: center;
+    flex-direction:column ;
+    margin: 5%;
+}
+#contact-us .form-control {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
+}
+
+#contact-us .form-control:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#contact-us button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact-us button:hover {
+    background-color: #0056b3;
+}
+#social-media .fa {
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+#social-media .fa:hover {
+    transform: scale(1.2);
+    color: #007bff;
+}
+#brand-slogan img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navigation li {
+    margin: 10px;
+}
+
+#navigation a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#navigation a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+#legal {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+#legal a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#legal a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    #brand-slogan img {
+        max-width: 90%;
+    }
+    #navigation ul {
+        flex-direction: column;
+    }
+    #navigation li {
+        margin: 5px 0;
+    }
+}

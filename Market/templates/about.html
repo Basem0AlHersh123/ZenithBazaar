@@ -1,0 +1,33 @@
+{%extends "base.html"%}
+{%block title%}
+contact us
+{%endblock%}
+{% block content %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/about_us.css')}}">    
+
+<body>
+    <h1 class="m-md-4 text-center" style="font-family: MonumentExtended-Regular!important; font-weight: bold;">About Us</h1>
+    <div id="main">
+        <div class="m-md-5" id="text">
+            <section>
+                <article>
+                    <p>
+                        <mark>Basem Al-Hersh</mark> is dedicated to helping you hack your IT career. Whether you want to become a network engineer, a hacker, cloud engineer, web developer or just want to know how to get started in IT, you’ve come to the right place. Basem Al-Hersh started from a <mark>Telegram channel</mark> and has grown to over <mark>2,800,000</mark> subscribers, helping thousands each month reach their IT goals
+                        Inspired by his Telegram following, Basem has launched a line of <mark>tools for hackers </mark> to ease their jobs.
+                    </p>
+                </article>
+            </section>
+            <br>
+            <div class="images">
+                <a href="youtube.com"><img src="{{ url_for('static', filename='images/footer/YouTube.png')}}" alt="button" width="50"></a>
+                <a href="twitter.com"><img src="{{ url_for('static', filename='images/footer/Twitter.png  ')}}" alt="button" width="50"></a>
+                <a href="instagram.com"><img src="{{ url_for('static', filename='images/footer/Instagram.png')}}" alt="button" width="50"></a>
+                <a href="facebook.com"><img src="{{ url_for('static', filename='images/footer/Facebook.png')}}" alt="button" width="50"></a>
+            </div>
+        </div>
+        <div id="image">
+            <img src="{{url_for('static',filename='images/images/my photo.png')}}" alt="My photo">
+        </div>
+    </div>
+</body>
+{%endblock%}
