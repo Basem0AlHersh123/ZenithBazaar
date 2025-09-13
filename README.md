@@ -53,35 +53,31 @@ Market/
 1. Clone this repository:
    ```bash
    git clone https://github.com/YOUR_USERNAME/ZenithBazaar.git
-   cd ZenithBazaar
-````
+   cd ZenithBazaar````
 
 2. Create and activate a virtual environment:
 
    ```bash
    python -m venv venv
    source venv/bin/activate  # Linux/Mac
-   venv\Scripts\activate     # Windows
-   ```
+   venv\Scripts\activate     # Windows```
 
 3. Install dependencies:
 
    ```bash
-   pip install -r requirements.txt
-   ```
+   pip install -r requirements.txt```
 
 4. Run the application:
 
    ```bash
-   python run.py
-   ```
+   python run.py```
 
 5. Visit the site in your browser:
 
    ```
-   http://127.0.0.1:5000
-   ```
+   http://127.0.0.1:5000```
 ------------------------------------
+
 ## 📸 Screenshots
 
 | Home Page | Market Page | Dashboard |
